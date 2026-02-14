@@ -91,6 +91,12 @@ a:hover{ text-decoration: none; }
   justify-content: center;
   margin-bottom: 14px;
 }
+.logo-mark img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
 .logo-mark svg{ width: 56px; height: 56px; }
 .logo-mark rect{
   fill: rgba(255,255,255,0.02);
