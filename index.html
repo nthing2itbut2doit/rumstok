@@ -1,107 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>rumstok</title>
+  <meta name="description" content="Independent tools. Shared philosophy." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-  <header class="hero">
-    <h1>rumstok</h1>
-    <p class="tagline">Independent tools. Shared philosophy.</p>
-    <a href="#products" class="button-outline">View tools</a>
-  </header>
+  <main class="page">
+    <header class="hero" id="top">
+      <div class="hero-card">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/arch_logo_with_name.png" width="600" height="150" alt="">
+        </div>
 
-  <section class="about">
-    <p>
-      Rumstok builds focused software tools designed for clarity, structure, and intentional work.
-    </p>
-    <p>
-      Each product stands on its own. All share the same standard.
-    </p>
-    <p>
-      Minimal by design. Durable by intent.
-    </p>
-  </section>
+        <h1 class="brand"></h1>
+        <p class="tagline">INDEPENDENT TOOLS. SHARED PHILOSOPHY.</p>
 
-  <section id="products" class="products">
-    <h2>Products</h2>
-
-    <div class="product">
-      <h3>Tabd</h3>
-      <p>Focused tab-first music writing.</p>
-      <div class="product-links">
-        <a href="https://tabd.rumstok.com" class="button">Launch</a>
-        <a href="/tabd" class="button-outline">Overview</a>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#products">View tools</a>
+          <a class="btn btn-ghost" href="#log">View log</a>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <div class="product">
-      <h3>TG2</h3>
-      <p>Personalized cipher utility.</p>
-      <div class="product-links">
-        <a href="https://tg2.rumstok.com" class="button">Launch</a>
-        <a href="/tg2" class="button-outline">Overview</a>
+    <section class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">Overview</h2>
+        <p class="lede">
+          Rumstok builds focused software tools designed for clarity, structure, and intentional work.
+        </p>
+        <p class="lede">
+          Each product stands on its own. All share the same standard.
+        </p>
+        <p class="lede">
+          Minimal by design. Durable by intent.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="product">
-      <h3>Axiset</h3>
-      <p>Structured inventory and operational management.</p>
-      <div class="product-links">
-        <a href="/axiset" class="button-outline">Overview</a>
+    <section class="section products" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title">Products</h2>
+
+        <div class="product">
+                  <div class="tabd-mark" aria-hidden="true">
+          <img src="assets/tabd_logo_pick.png" width="50" height="50" alt="">
+        </div>
+          <h3>Tabd</h3>
+          <p>Focused tab-first music writing.</p>
+          <div class="product-actions">
+            <a class="btn btn-primary" href="https://tabd.rumstok.com">Launch</a>
+            <a class="btn btn-ghost" href="#" aria-disabled="true">Overview</a>
+          </div>
+        </div>
+
+        <div class="product">
+          <h3>TG2</h3>
+          <p>Personalized cipher utility.</p>
+          <div class="product-actions">
+            <a class="btn btn-primary" href="https://tg2.rumstok.com">Launch</a>
+            <a class="btn btn-ghost" href="#" aria-disabled="true">Overview</a>
+          </div>
+        </div>
+
+        <div class="product">
+          <h3>Axiset</h3>
+          <p>Structured inventory and operational management.</p>
+          <div class="product-actions">
+            <a class="btn btn-ghost" href="#" aria-disabled="true">Overview</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="log">
-    <h2>Log</h2>
+    <section class="section log" id="log" aria-labelledby="log-title">
+      <div class="container">
+        <div class="log-head">
+          <h2 id="log-title">Logbook</h2>
+          <p class="muted">Chronological technical updates across Rumstok tools.</p>
+        </div>
 
-    <article class="log-entry">
-      <h3>2026-02-14 — Tabd</h3>
-      <p>Column-level selection and structural drafting tools implemented. Divider columns and editable markers added without altering core layout or data model.</p>
-    </article>
+        <article class="log-entry">
+          <header class="log-entry-head">
+            <h3>2026-02-14 — Tabd</h3>
+            <div class="pill">Refinement phase</div>
+          </header>
 
-    <article class="log-entry">
-      <h3>2026-02-14 — Axiset</h3>
-      <p>Initial backend scaffold generated with core entity hierarchy and role-based access control structure defined.</p>
-    </article>
+          <p><strong>Summary:</strong><br>
+            Column-level selection and structural drafting tools implemented. Divider columns and editable markers added without altering core layout or data model.
+          </p>
 
-    <article class="log-entry">
-      <h3>2026-02-14 — TG2</h3>
-      <p>Android-ready PWA packaging completed. Layout symmetry issues resolved and cipher integrity model stabilized.</p>
-    </article>
+          <p><strong>Status:</strong><br>
+            Refinement phase.
+          </p>
 
-  </section>
+          <p><strong>Changes:</strong></p>
+          <ul>
+            <li>Implemented drag-based column selection with snap-to-column behavior</li>
+            <li>Added visual selection overlay with ESC-based clearing</li>
+            <li>Implemented insert-based clipboard operations:
+              <ul>
+                <li><code>Ctrl+C</code> copy selected columns</li>
+                <li><code>Ctrl+X</code> cut selected columns</li>
+                <li><code>Ctrl+V</code> paste at selection start (or cursor if no selection)</li>
+                <li><code>Ctrl+D</code> duplicate selection</li>
+              </ul>
+            </li>
+            <li>Introduced structural divider column type rendering <code>|</code> across all rows and included in ASCII export</li>
+            <li>Enabled divider deletion through standard column removal logic</li>
+            <li>Added editable marker system anchored to column index</li>
+            <li>Implemented right-click marker deletion</li>
+            <li>Ensured marker repositioning on column insert/delete operations</li>
+            <li>Updated product branding from TaoTech to Rumstok</li>
+            <li>Consolidated contact address to <code>projects@rumstok.com</code></li>
+          </ul>
 
-  <footer>
-    <div class="footer-left">
-      <p>rumstok</p>
-      <p class="tagline-small">Independent tools. Shared philosophy.</p>
-    </div>
+          <p><strong>Notes:</strong><br>
+            All additions were implemented incrementally to preserve render stability and input behavior. Selection and structural elements operate independently of playback or timing systems, maintaining Tabd’s drafting-first architecture.
+          </p>
+        </article>
 
-    <div class="footer-middle">
-      <p><strong>Products</strong></p>
-      <p><a href="https://tabd.rumstok.com">Tabd</a></p>
-      <p><a href="https://tg2.rumstok.com">TG2</a></p>
-      <p><a href="/axiset">Axiset</a></p>
-    </div>
+        <article class="log-entry">
+          <header class="log-entry-head">
+            <h3>2026-02-14 — Axiset</h3>
+            <div class="pill">In development</div>
+          </header>
 
-    <div class="footer-right">
-      <p><strong>Contact</strong></p>
-      <p><a href="mailto:projects@rumstok.com">projects@rumstok.com</a></p>
-    </div>
+          <p><strong>Summary:</strong><br>
+            Initial backend scaffold generated with core entity hierarchy and role-based access control structure defined. Project transitioned from Excel prototype to web application architecture.
+          </p>
 
-    <div class="footer-bottom">
-      <p>© 2026 Rumstok</p>
-    </div>
-  </footer>
+          <p><strong>Status:</strong><br>
+            In development.
+          </p>
 
+          <p><strong>Changes:</strong></p>
+          <ul>
+            <li>Established multi-tenant schema structure (<code>tenants</code>, <code>warehouse_groups</code>, <code>warehouses</code>, <code>locations</code>, <code>skids</code>, <code>items</code>)</li>
+            <li>Implemented role definitions: Sr. Facilities Manager, Facilities Manager, Lead, Facilities Assistant, Coordinator, Admin</li>
+            <li>Defined scope assignment tables (<code>user_warehouse</code>, <code>user_group_access</code>)</li>
+            <li>Enforced organization-wide read and search permissions across roles</li>
+            <li>Restricted Coordinator role to managing Facilities Assistant and Lead roles only</li>
+            <li>Limited inventory write access by warehouse or warehouse-group scope</li>
+            <li>Reserved technical panels (logs, reports, configuration) for Admin role</li>
+            <li>Generated <code>Axiset_v0.1.0</code> scaffold package with FastAPI backend, RBAC policy documentation, and Docker configuration</li>
+          </ul>
+
+          <p><strong>Notes:</strong><br>
+            Role enforcement logic is centralized in the backend to prevent privilege escalation, including restriction of Coordinator role promotion to inventory-writing roles. The current schema supports warehouse-group hierarchy and scalable scope assignments without requiring structural refactoring.
+          </p>
+        </article>
+
+        <article class="log-entry">
+          <header class="log-entry-head">
+            <h3>2026-02-14 — TG2</h3>
+            <div class="pill">Refinement phase</div>
+          </header>
+
+          <p><strong>Summary:</strong><br>
+            Android-ready PWA packaging completed. Layout symmetry issues resolved and cipher integrity model stabilized.
+          </p>
+
+          <p><strong>Status:</strong><br>
+            Refinement phase.
+          </p>
+
+          <p><strong>Changes:</strong></p>
+          <ul>
+            <li>Implemented versioned header format <code>~TG2:NONCE~</code></li>
+            <li>Added 6-hex integrity tag <code>#H:XXXXXX</code> with verification during decode</li>
+            <li>Enabled automatic encode/decode mode detection based on header presence</li>
+            <li>Finalized service worker caching for offline support</li>
+            <li>Configured <code>manifest.webmanifest</code> for standalone installation</li>
+            <li>Corrected grid column imbalance affecting textarea symmetry</li>
+            <li>Enforced equal textarea height with stable scrollbar gutter handling</li>
+            <li>Standardized box model using global <code>box-sizing: border-box</code></li>
+            <li>Added dark/light toggle with persistent <code>localStorage</code> state</li>
+          </ul>
+
+          <p><strong>Notes:</strong><br>
+            TG2 is structurally stable for HTTPS deployment. The current architecture supports PWA installation on Android without native packaging. Cipher header format and integrity model are locked for this iteration. Future revisions will maintain backward compatibility with the <code>~TG2:</code> header scheme.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-left">
+            <div class="footer-brand">rumstok</div>
+            <div class="footer-sub">Independent tools. Shared philosophy.</div>
+          </div>
+          <div class="footer-right">
+            <a href="#top" class="footer-link">Top</a>
+            <a href="mailto:projects@rumstok.com" class="footer-link">projects@rumstok.com</a>
+          </div>
+        </div>
+        <div class="footer-fine">© <span id="year"></span> Rumstok</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

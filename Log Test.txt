@@ -1,0 +1,69 @@
+2026-02-14 — Tabd
+
+Summary:
+Column-level selection and structural drafting tools implemented. Divider columns and editable markers added without altering core layout or data model.
+
+Status:
+Refinement phase.
+
+Changes:
+- Implemented drag-based column selection with snap-to-column behavior
+- Added visual selection overlay with ESC-based clearing
+- Implemented insert-based clipboard operations:
+  - `Ctrl+C` copy selected columns
+  - `Ctrl+X` cut selected columns
+  - `Ctrl+V` paste at selection start (or cursor if no selection)
+  - `Ctrl+D` duplicate selection
+- Introduced structural divider column type rendering `|` across all rows and included in ASCII export
+- Enabled divider deletion through standard column removal logic
+- Added editable marker system anchored to column index
+- Implemented right-click marker deletion
+- Ensured marker repositioning on column insert/delete operations
+- Updated product branding from TaoTech to Rumstok
+- Consolidated contact address to `projects@rumstok.com`
+
+Notes:
+All additions were implemented incrementally to preserve render stability and input behavior. Selection and structural elements operate independently of playback or timing systems, maintaining Tabd’s drafting-first architecture.
+
+2026-02-14 — Axiset
+
+Summary:
+Initial backend scaffold generated with core entity hierarchy and role-based access control structure defined. Project transitioned from Excel prototype to web application architecture.
+
+Status:
+In development.
+
+Changes:
+- Established multi-tenant schema structure (`tenants`, `warehouse_groups`, `warehouses`, `locations`, `skids`, `items`)
+- Implemented role definitions: Sr. Facilities Manager, Facilities Manager, Lead, Facilities Assistant, Coordinator, Admin
+- Defined scope assignment tables (`user_warehouse`, `user_group_access`)
+- Enforced organization-wide read and search permissions across roles
+- Restricted Coordinator role to managing Facilities Assistant and Lead roles only
+- Limited inventory write access by warehouse or warehouse-group scope
+- Reserved technical panels (logs, reports, configuration) for Admin role
+- Generated `Axiset_v0.1.0` scaffold package with FastAPI backend, RBAC policy documentation, and Docker configuration
+
+Notes:
+Role enforcement logic is centralized in the backend to prevent privilege escalation, including restriction of Coordinator role promotion to inventory-writing roles. The current schema supports warehouse-group hierarchy and scalable scope assignments without requiring structural refactoring.
+
+2026-02-14 — TG2
+
+Summary:
+Android-ready PWA packaging completed. Layout symmetry issues resolved and cipher integrity model stabilized.
+
+Status:
+Refinement phase.
+
+Changes:
+- Implemented versioned header format `~TG2:NONCE~`
+- Added 6-hex integrity tag `#H:XXXXXX` with verification during decode
+- Enabled automatic encode/decode mode detection based on header presence
+- Finalized service worker caching for offline support
+- Configured `manifest.webmanifest` for standalone installation
+- Corrected grid column imbalance affecting textarea symmetry
+- Enforced equal textarea height with stable scrollbar gutter handling
+- Standardized box model using global `box-sizing: border-box`
+- Added dark/light toggle with persistent `localStorage` state
+
+Notes:
+TG2 is structurally stable for HTTPS deployment. The current architecture supports PWA installation on Android without native packaging. Cipher header format and integrity model are locked for this iteration. Future revisions will maintain backward compatibility with the `~TG2:` header scheme.
