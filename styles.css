@@ -91,9 +91,11 @@ a:hover{ text-decoration: none; }
   justify-content: center;
   margin-bottom: 14px;
 }
-.logo-mark img {
+
+/* revised: desktop cap + mobile override */
+.logo-mark img{
   width: 100%;
-  max-width: 320px;
+  max-width: 480px; /* desktop presence */
   height: auto;
 }
 
@@ -271,4 +273,9 @@ a:hover{ text-decoration: none; }
   .cta-row{ flex-direction:column; }
   .btn{ width: 100%; }
   .log-head{ flex-direction:column; align-items:flex-start; }
+
+  /* revised: mobile containment */
+  .logo-mark img{
+    max-width: 260px;
+  }
 }
